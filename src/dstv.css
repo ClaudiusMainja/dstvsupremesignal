@@ -1,0 +1,31 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hero-pattern {
+    background-image: 
+        linear-gradient(to right, rgba(46, 49, 146, 0.9), rgba(88, 96, 188, 0.9)),
+        url('/assets/images/dstvhero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.package-card {
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-gradient {
+    background: linear-gradient(135deg, #F7941D, #f7941d80);
+}
+
+.installation-features {
+    background-image: linear-gradient(rgba(46, 49, 146, 0.95), rgba(88, 96, 188, 0.95)),
+        url('/api/placeholder/1920/1080');
+    background-attachment: fixed;
+    background-size: cover;
+}
