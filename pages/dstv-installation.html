@@ -36,6 +36,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/main.css">
     <link rel="stylesheet" href="/src/dstv.css">
@@ -111,11 +112,11 @@
                     </svg>
                     <span class="text-sm">+27 082 595 0324</span>
                 </a>
-                <a href="mailto:info@dstvsupremesignal.co.za" target="_blank" class="flex items-center space-x-2 hover:text-blue-200 transition-colors duration-300">
+                <a href="mailto:sales@dstvsupremesignal.co.za" target="_blank" class="flex items-center space-x-2 hover:text-blue-200 transition-colors duration-300">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                     </svg>
-                    <span class="text-sm">info@dstvsupremesignal.co.za</span>
+                    <span class="text-sm">sales@dstvsupremesignal.co.za</span>
                 </a>
             </div>
         </div>
@@ -438,9 +439,73 @@
 
     </div>
 </section>
-
-
-      </body>
+<!-- Contact Button -->
+<div id="contact-button" class="fixed bottom-6 right-6 z-50">
+    <!-- Contact Options Modal -->
+    <div id="contact-options" class="hidden">
+        <!-- Modal Background -->
+        <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"></div>
+        
+        <!-- Modal Content -->
+        <div class="absolute bottom-20 right-0 w-72 bg-white rounded-xl shadow-2xl transform transition-all duration-300">
+            <!-- Header -->
+            <div class="p-6 border-b border-gray-100">
+                <h3 class="text-xl font-semibold text-gray-800">Let's Chat! 👋</h3>
+                <p class="text-sm text-gray-600 mt-2">Choose how you'd like to connect with us</p>
+            </div>
+            
+            <!-- Contact Options -->
+            <div class="p-4 space-y-3">
+                <!-- WhatsApp Option -->
+                <a href="https://wa.me/message/U6DYJKN4TV5YJ1" target="_blank" 
+                   class="flex items-center gap-4 p-3 rounded-lg hover:bg-green-50 transition-all duration-300 group">
+                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">WhatsApp</h4>
+                        <p class="text-sm text-gray-500">Instant messaging support</p>
+                    </div>
+                    <i class="fas fa-chevron-right ml-auto text-gray-400 group-hover:translate-x-1 transition-transform duration-300"></i>
+                </a>
+  
+                <!-- Messenger Option -->
+                <a href="https://wa.me/message/U6DYJKN4TV5YJ1" target="_blank"
+                   class="flex items-center gap-4 p-3 rounded-lg hover:bg-purple-50 transition-all duration-300 group">
+                    <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-facebook-messenger text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">Messenger</h4>
+                        <p class="text-sm text-gray-500">Chat via Facebook</p>
+                    </div>
+                    <i class="fas fa-chevron-right ml-auto text-gray-400 group-hover:translate-x-1 transition-transform duration-300"></i>
+                </a>
+  
+                <!-- Phone Option -->
+                <a href="tel:0825950324"
+                   class="flex items-center gap-4 p-3 rounded-lg hover:bg-blue-50 transition-all duration-300 group">
+                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-phone text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800">Phone Call</h4>
+                        <p class="text-sm text-gray-500">Direct voice support</p>
+                    </div>
+                    <i class="fas fa-chevron-right ml-auto text-gray-400 group-hover:translate-x-1 transition-transform duration-300"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Main Toggle Button -->
+    <button id="toggle-contact" 
+            class="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
+        <i class="fas fa-comments text-xl group-hover:rotate-12 transition-transform duration-300"></i>
+        <span class="text-sm font-medium mr-2">Let's Chat</span>
+    </button>
+  </div>
+        </body>
       <!-- Footer -->
  <footer class="bg-gray-900 text-white pt-20 pb-6">
     <div class="container mx-auto px-4">
@@ -480,7 +545,7 @@
                         <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
-                        <span class="text-gray-400">info@dstvsupremesignal.co.za</span>
+                        <span class="text-gray-400">sales@dstvsupremesignal.co.za</span>
                     </li>
                 </ul>
                 <div class="flex space-x-4 mt-4">
@@ -616,6 +681,50 @@
   });
 </script>
 
+
+<!--for the button -->
+<script>
+    const toggleButton = document.getElementById('toggle-contact');
+    const optionsContainer = document.getElementById('contact-options');
+    let isOpen = false;
+  
+    toggleButton.addEventListener('click', () => {
+        isOpen = !isOpen;
+        if (isOpen) {
+            optionsContainer.classList.remove('hidden');
+            // Add animation for fade in
+            setTimeout(() => {
+                optionsContainer.querySelector('.bg-black').classList.add('opacity-50');
+                optionsContainer.querySelector('.modal-content').classList.add('opacity-100');
+            }, 50);
+        } else {
+            closeModal();
+        }
+    });
+  
+    // Close modal function
+    function closeModal() {
+        isOpen = false;
+        optionsContainer.classList.add('hidden');
+        optionsContainer.querySelector('.bg-black').classList.remove('opacity-50');
+        optionsContainer.querySelector('.modal-content').classList.remove('opacity-100');
+    }
+  
+    // Close when clicking outside
+    document.addEventListener('click', (event) => {
+        const contactButton = document.getElementById('contact-button');
+        if (!contactButton.contains(event.target) && isOpen) {
+            closeModal();
+        }
+    });
+  
+    // Close on escape key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && isOpen) {
+            closeModal();
+        }
+    });
+  </script>
 
 <script>
      // Mobile menu functionality
