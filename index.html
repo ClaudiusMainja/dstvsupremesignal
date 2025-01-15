@@ -331,6 +331,48 @@
         </div>
     </div>
 
+       <!-- Location Section -->
+       <section class="w-full bg-gradient-to-br from-primary to-primary-light py-16">
+        <div class="container mx-auto px-4">
+            <!-- Hero Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                    Our Service Areas
+                </h1>
+                <p class="text-gray-200 text-lg">
+                    Professional DStv Installation Services Across South Africa
+                </p>
+            </div>
+
+            <!-- Map Section -->
+            <div class="bg-white rounded-lg shadow-xl p-4 mb-12">
+                <div class="aspect-w-16 aspect-h-9 w-full mb-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917749.3228312535!2d27.5!3d-26.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg!5e0!3m2!1sen!2sza!4v1674596200!5m2!1sen!2sza"
+                        class="w-full h-full rounded-lg"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Locations Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="regionsContainer">
+                <!-- Regions will be populated by JavaScript -->
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-12 text-center">
+                <a href="tel:+27825950324 " target="_blank">
+                    <button class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300">
+                       Call Your Local Installer
+                    </button>
+                </a>
+        </div>
+    </section>
+
     <!-- Contact Button -->
     <div id="contact-button" class="fixed bottom-6 right-6 z-50">
         <!-- Contact Options Modal -->
@@ -465,6 +507,73 @@
     </div>
 </footer>
 
+<!--Location scripts-->
+
+<script>
+    const regions = [
+        {
+            name: "Gauteng North",
+            cities: ["Pretoria", "Pretoria East", "Centurion", "Midrand"]
+        },
+        {
+            name: "Gauteng Central",
+            cities: ["Johannesburg", "Sandton", "Randburg", "Roodepoort"]
+        },
+        {
+            name: "Gauteng East",
+            cities: ["Kempton Park", "Springs", "Benoni", "Boksburg", "Brakpan", "Bapsfontein"]
+        },
+        {
+            name: "Other Areas",
+            cities: ["Secunda", "Hartbeespoort", "Krugersdorp", "Alberton", "Edenvale", "Bedfordview"]
+        }
+    ];
+
+    const regionsContainer = document.getElementById('regionsContainer');
+
+    regions.forEach(region => {
+        const regionCard = document.createElement('div');
+        regionCard.className = 'bg-white rounded-lg shadow-lg overflow-hidden location-card';
+        
+        regionCard.innerHTML = `
+            <div class="bg-gradient-to-r from-primary to-primary-light p-4 cursor-pointer region-header">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-semibold text-white">${region.name}</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="region-content">
+                <div class="p-4 bg-gray-50">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        ${region.cities.map(city => `
+                            <div class="flex items-center space-x-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="text-gray-700">${city}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        regionsContainer.appendChild(regionCard);
+
+        const header = regionCard.querySelector('.region-header');
+        const content = regionCard.querySelector('.region-content');
+        const arrow = regionCard.querySelector('svg');
+
+        header.addEventListener('click', () => {
+            content.classList.toggle('active');
+            arrow.classList.toggle('rotate-180');
+        });
+    });
+</script>
+<!--Animation scripts -->
 <script>
     // Enhanced animations for elements
     document.querySelectorAll('button').forEach(button => {
